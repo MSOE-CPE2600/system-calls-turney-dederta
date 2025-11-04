@@ -22,11 +22,11 @@ This program explores Linux system calls for both processes and files.
 
 Use the Makfile
 
-make all    # Build all programs
-make clean  # Remove executables and object files
+- 'make all'    # Build all programs
+- 'make clean'  # Remove executables and object files
 
 ## Usage
-./info          # Displays system information
-./pinfo [PID]   # Show process info
-./pmod          # Change priority, sleep, print goodbye
-./finfo <file>  # Show file info
+- './info'        # Displays system information
+- './pinfo [PID]' # Show process info
+- './pmod'          # Change priority, sleep, print goodbye
+- './finfo <file>'  # Show file info
