@@ -32,18 +32,18 @@ int main(int argc, char* argv[])
         pid = (pid_t)atoi(argv[1]);
         if (pid <= 0) {
             fprintf(stderr, "Invalid PID: %s\n", argv[1]);
-            return EXIT_FAILURE;
+            return 1;
         }
     } else {
         fprintf(stderr, "Usage: %s [pid]\n", argv[0]);
-        return EXIT_FAILURE;
+        return 1;
     }
 
     // Get scheduling policy
     policy = sched_getscheduler(pid);
     if (policy == -1) {
         perror("Error getting scheduling policy");
-        return EXIT_FAILURE;
+        return 1;
     }
 
     // Get priority
@@ -80,5 +80,5 @@ int main(int argc, char* argv[])
     printf("Scheduling Policy: %s\n", policyName);
     printf("Priority: %d\n", priority);
 
-    return EXIT_SUCCESS;
+    return 0;
 }
