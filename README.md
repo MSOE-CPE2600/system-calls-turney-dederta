@@ -22,7 +22,6 @@ This program explores Linux system calls for both processes and files.
 
 Use the Makfile
 
-'''bash
 make all    # Build all programs
 make clean  # Remove executables and object files
 
